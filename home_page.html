@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+      }
+      .navigation {
+        position: relative;
+        height: 72px;
+        width: 100vw;
+        /* background-attachment: ; */
+        background: #ffffff;
+        box-shadow: 0 1px 2px 0px #000000;
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        list-style: none;
+      }
+      .input-box {
+        width: 242px;
+        height: 19px;
+
+        outline: none;
+        border: none;
+        font-family: sans-serif;
+        font-size: 14px;
+        background: #dcdcdc;
+      }
+
+      .inp-con {
+        display: inline-block;
+        width: 360px;
+        height: 42px;
+        background: #dcdcdc;
+
+        border-radius: 21px;
+        display: flex;
+        align-items: center;
+      }
+      .vector-con {
+        display: inline-block;
+        position: relative;
+        width: 22px;
+
+        /* align-items: center; */
+        height: 22px;
+        margin-left: 20px;
+      }
+      .vector-2 {
+        position: absolute;
+        display: inline-block;
+        width: 16.03px;
+        height: 16.03px;
+      }
+      .itsfree {
+        font-family: sans-serif;
+        color: #2f6ce5;
+        font-weight: 530;
+      }
+      .text {
+        font-family: sans-serif;
+        font-weight: 530;
+        color: #2e2e2e;
+      }
+      .down-icon i {
+        font-size: 13px;
+      }
+      .item-1 {
+        position: absolute;
+        left: 72px;
+      }
+      .item-2 {
+        position: absolute;
+        left: 540px;
+      }
+      .item-3 {
+        /* margin-left: 200px; */
+        position: absolute;
+        left: 1161px;
+      }
+      .bg-image {
+        position: relative;
+        height: 440px;
+        width: 100%;
+
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+      }
+      .bg-img {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+      }
+      .bg-img img {
+        width: 100%;
+        height: 100%;
+      }
+      .contain {
+        position: absolute;
+
+        width: 378px;
+        height: 47px;
+        top: 300px;
+        left: 200px;
+        font-family: sans-serif;
+        color: white;
+      }
+      .contain h3 {
+        font-size: 30px;
+      }
+      .contain p {
+        font-size: 14px;
+        color: rgb(228, 219, 219);
+      }
+      .card-container {
+        height: 100vh;
+        width: 100vw;
+        padding: 0px 200px;
+      }
+      .all-arc {
+        margin-top: 10px;
+        height: 30px;
+        width: 100%;
+        /* background-color: rebeccapurple; */
+      }
+      .all-arc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .left {
+        display: flex;
+        align-items: center;
+      }
+      .right {
+        display: flex;
+      }
+      .right-btn {
+        display: inline-block;
+        width: 125px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 4px;
+        background: #edeef0;
+        color: black;
+        font-family: sans-serif;
+        font-size: 13px;
+        font-weight: 520;
+      }
+      .right-icon {
+        margin-left: 5px;
+      }
+      .right-btn-2 {
+        display: inline-block;
+        width: 125px;
+        height: 36px;
+
+        border-radius: 4px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 4px;
+        background: #2f6ce5;
+        color: white;
+        font-family: sans-serif;
+        font-size: 13px;
+        margin-left: 10px;
+
+        font-weight: 520;
+      }
+      .arc-item {
+        margin-right: 20px;
+        font-family: sans-serif;
+      }
+      hr {
+        width: 100%;
+        margin-top: 10px;
+        height: 1px;
+        /* color: gray; */
+        background-color: gray;
+        opacity: 0.5;
+      }
+      .arc-card {
+        height: 480px;
+        position: relative;
+        width: 692px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 0px gray;
+      }
+      .card-bg {
+        height: 220px;
+        width: 100%;
+        background-color: blue;
+      }
+      .card-bg img {
+        height: 100%;
+        width: 100%;
+      }
+      .card-contain {
+        height: 53%;
+        width: 100%;
+        position: relative;
+        padding: 10px 20px;
+      }
+      .card-profile {
+        margin: 30px 0px;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+
+        /* justify-content: space-between; */
+      }
+      .profile-img {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+      }
+      .card-contain {
+        font-family: sans-serif;
+      }
+      .card-contain h2 {
+        font-size: 22px;
+        margin: 10px 0px;
+      }
+      .card-contain p {
+        color: gray;
+        margin: 15px 0px;
+      }
+      .share {
+        display: inline-block;
+
+        height: 40px;
+        width: 40px;
+        background: rgba(237, 238, 240, 1);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* position: absolute; */
+        margin-left: 20px;
+        right: 20px;
+      }
+      .share i {
+        color: black;
+      }
+      .name {
+        margin-left: 15px;
+        font-family: sans-serif;
+        font-weight: 600;
+      }
+      .t-dot {
+        position: absolute;
+        top: 37px;
+        right: 20px;
+        font-size: 30px;
+      }
+      .eye-profile {
+        /* position: absolute; */
+        margin-left: 19vw;
+      }
+      .view {
+        font-size: 15px;
+        color: gray;
+        margin-left: 20px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+      .H-container {
+        margin-top: 20px;
+        min-height: 70vh;
+        width: 100%;
+
+        display: flex;
+      }
+      .h-left-container {
+        width: 61%;
+        margin-bottom: 40px;
+      }
+      .right-container {
+        width: 39%;
+        margin-left: 10px;
+      }
+      .card-profile {
+        position: absolute;
+        bottom: 10px;
+      }
+      .clc {
+        margin-right: 10px;
+      }
+      .loc {
+        margin: 0px 10px;
+      }
+      .vw {
+        height: 30px;
+        margin: 10px 0px;
+        width: 100%;
+        /* text-align: center; */
+        border: 1px solid gray;
+        color: rgba(229, 97, 53, 1);
+
+        font-family: sans-serif;
+        /* vertical-align: middle; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .arc-card-m {
+        height: 263px;
+        position: relative;
+        width: 692px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 0px gray;
+      }
+      .card-profile-m {
+        position: absolute;
+        bottom: 30px;
+      }
+      .card-contain-m {
+        height: 100%;
+        width: 100%;
+        padding: 10px 20px;
+      }
+      .card-contain-m .share {
+        position: absolute;
+        right: -60px;
+        bottom: -10px;
+      }
+      .card-contain-m h2 {
+        margin: 15px 0px;
+      }
+      .card-contain-m .vw {
+        margin: 30px 0px;
+        color: green;
+      }
+      .right-container {
+        padding: 20px 50px;
+      }
+    </style>
+    <style>
+      @media only screen and (max-width: 820px) {
+        body {
+        }
+        .inp-con{
+display: none;
+        }
+        .arc-card {
+          width: 100%;
+        }
+        .arc-card-m{
+          width: 81vw;
+        }
+
+        .item-1 {
+          position: relative;
+          left: 10px;
+        }
+        .item-2 {
+          position: relative;
+          left: 70px;
+        }
+        .item-3 {
+          position: relative;
+          left: 82px;
+        }
+        .card-container {
+          padding: 0px 40px;
+        }
+        .H-container {
+          flex-direction: column-reverse;
+        }
+        .h-left-container {
+          width: 100%;
+          padding: 0px 33px;
+        }
+        .right-container {
+          width: 100%;
+        }
+        .contain{
+          width: 378px;
+  height: 47px;
+  top: 264px;
+  left: 31px;
+        }
+        .item-2 {
+    position: relative;
+    left: 18px;
+  }
+  .item-3 {
+    position: relative;
+    left: 25px;
+  }
+  @media only screen and (max-width: 480px) {
+    body{
+     
+    }
+  .right-container  .right-inputs {
+  width: 41vw;}
+  .right-container .right-hr {
+  width: 54vw;
+}
+    .share-m{
+      margin-left: 14px;
+      height: 40px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .share{
+      margin-left: 13px;
+    }
+    .all-arc{
+      overflow-x: scroll;
+      padding: 30px 0px;
+      overflow-y:hidden;
+      width: 100%;
+    }
+    .card-container{
+      padding: 0px 20px;
+    }
+    .card-title{
+      width: 90%;
+    }
+    .arc-card{
+      height: 55vh;
+    }
+    .card-contain{
+      height: 64%;
+    }
+    .card-profile{
+      position: absolute;
+  bottom: 25px;
+    }
+    .eye-profile{
+      margin-left: 5vw;
+    }
+    .name{
+      margin-left: 5px;
+    }
+    .card-profile-m {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.card-contain-m .share{
+  position: relative;
+}
+  }
+
+  
+        @media only screen and (max-width: 1300px) {
+          .arc-card {
+            width: 81vw;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <ul class="navigation">
+          <li class="item-1">
+            <a href="" class="link"
+              ><img src="whole.png" alt="" class="logo"
+            /></a>
+          </li>
+          <li class="item-2">
+            <span class="inp-con"
+              ><span class="vector-con"
+                ><img class="vector" src="Vector (1).png" alt="" /><img
+                  src="Vector.png"
+                  alt=""
+                  class="vector-2"
+                /> </span
+              ><input
+                aria-label="input"
+                type="text"
+                placeholder="search for your favorite groups in ATG"
+                class="input-box"
+            /></span>
+          </li>
+          <li class="item-3">
+            <span class="text">Create account.</span
+            ><span class="itsfree">It's free!</span
+            ><span class="down-icon"
+              ><i class="bi bi-caret-down-fill"></i
+            ></span>
+          </li>
+        </ul>
+      </header>
+      <div class="bg-image">
+        <div class="bg-img"><img src="Rectangle2.png" alt="" /></div>
+        <div class="contain">
+          <h3>Computer Engineering</h3>
+          <p class="para">142,765 computer Engineers follow this</p>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <ul class="all-arc">
+          <div class="left">
+            <li class="arc-item">All post(33)</li>
+            <li class="arc-item">Article</li>
+            <li class="arc-item">Event</li>
+            <li class="arc-item">Education</li>
+            <li class="arc-item">Job</li>
+          </div>
+          <div class="right">
+            <a href="" class="right-btn"
+              >Write a Post<span class="right-icon"
+                ><i class="bi bi-caret-down-fill"></i></span
+            ></a>
+            <a href="" class="right-btn-2"
+              ><span class="right-icon-2"></span>Join Group</a
+            >
+          </div>
+        </ul>
+        <hr class="hr" />
+
+        <div class="H-container">
+          <div class="h-left-container">
+            <div class="arc-card">
+              <div class="card-bg">
+                <img src="Rectangle5.png" alt="" />
+              </div>
+              <div class="card-contain">
+                <span class="article"
+                  ><img class="art-img" src="article.png" alt=""
+                /></span>
+                <span class="t-dot"><i class="bi bi-three-dots"></i></span>
+                <h2 class="card-title">
+                  What if famous brands had regular fonts? Meet <br />
+                  RegulaBrands!
+                </h2>
+                <p class="card-des">I’ve worked in UX for the better part of a decade. From nowon, I plan to rei…
+                </p>
+                <div class="card-profile">
+                  <span class="logo-img"
+                    ><img
+                      class="profile-img"
+                      src="Rectangle3.png"
+                      alt="" /></span
+                  ><span class="name"> sathark kamara</span>
+                  <span class="eye-profile"><i class="bi bi-eye"></i></span
+                  ><span class="view">1.4k views</span
+                  ><span class="share"><i class="bi bi-share-fill"></i></span>
+                </div>
+              </div>
+            </div>
+            <!--container-->
+            <div class="arc-card">
+              <div class="card-bg">
+                <img src="Rectangle5'(1).png" alt="" />
+              </div>
+              <div class="card-contain">
+                <span class="article"
+                  ><img class="art-img" src="Education (1).png" alt=""
+                /></span>
+                <span class="t-dot"><i class="bi bi-three-dots"></i></span>
+                <h2 class="card-title">
+                  Tax Benefits for Investment under National Pensionbr <br />
+                  Scheme launched by Government
+                </h2>
+                <p class="card-des">
+                  I’ve worked in UX for the better part of a decade. From now
+                  on, I plan to rei…
+                </p>
+                <div class="card-profile">
+                  <span class="logo-img"
+                    ><img
+                      class="profile-img"
+                      src="Rectangle 3 (1).png"
+                      alt="" /></span
+                  ><span class="name">Sarah west</span>
+                  <span class="eye-profile"><i class="bi bi-eye"></i></span
+                  ><span class="view">1.4k views</span
+                  ><span class="share"><i class="bi bi-share-fill"></i></span>
+                </div>
+              </div>
+            </div>
+            <!--container-->
+            <div class="arc-card">
+              <div class="card-bg">
+                <img src="Rectangle8.png" alt="" />
+              </div>
+              <div class="card-contain">
+                <span class="article"
+                  ><img class="art-img" src="Meetup.png" alt=""
+                /></span>
+                <span class="t-dot"><i class="bi bi-three-dots"></i></span>
+                <h2 class="card-title">
+                  Finance & Investment Elite Social Mixer @Lujiazui
+                </h2>
+                <p class="card-des">
+                  <span class="clc"><i class="bi bi-calendar-week"></i></span
+                  >Fri, 12 Oct, 2018
+                  <span class="loc"><i class="bi bi-geo-alt"></i></span
+                  >Ahmedabad, India
+                </p>
+                <div class="vw">
+                  <span class="v-heading">visite website </span>
+                </div>
+                <div class="card-profile">
+                  <span class="logo-img"
+                    ><img
+                      class="profile-img"
+                      src="Rectangle 3 (1).png"
+                      alt="" /></span
+                  ><span class="name"> sathark kamara</span>
+                  <span class="eye-profile"><i class="bi bi-eye"></i></span
+                  ><span class="view">1.4k views</span
+                  ><span class="share"><i class="bi bi-share-fill"></i></span>
+                </div>
+              </div>
+            </div>
+            <!--container-->
+            <div class="arc-card-m">
+              <div class="card-contain-m">
+                <span class="article"
+                  ><img class="art-img" src="Job.png" alt=""
+                /></span>
+                <span class="t-dot"><i class="bi bi-three-dots"></i></span>
+                <h2 class="card-title">Software Developer</h2>
+                <p class="card-des">
+                  <span class="clc"><i class="bi bi-calendar-week"></i></span
+                  >Fri, 12 Oct, 2018
+                  <span class="loc"><i class="bi bi-geo-alt"></i></span
+                  >Ahmedabad, India
+                </p>
+                <div class="vw">
+                  <span class="v-heading">visite website </span>
+                </div>
+                <div class="card-profile-m">
+                  <span class="logo-img"
+                    ><img
+                      class="profile-img"
+                      src="Rectangle3.png"
+                      alt="" /></span>
+                  <span class="name"> sathark kamara</span>
+                  <span class="eye-profile"><i class="bi bi-eye"></i></span>
+                  <span class="view">1.4k views</span>
+                  <span class="share-m"><i class="bi bi-share-fill"></i></span>
+                </div>
+              </div>
+              <style>
+                .right-inputs {
+                  width: 16vw;
+                  display: inline-block;
+                  border: none;
+                  outline: none;
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 600;
+                  color: black;
+                }
+                .pen {
+                  color: black;
+                }
+                .locs {
+                  margin-right: 10px;
+                }
+                .right-hr {
+                  width: 20vw;
+                }
+              </style>
+            </div>
+           
+          </div>
+          <!-- left -card container-->
+          <div class="right-container">
+            <span class="locs"><i class="bi bi-geo-alt"></i></span>
+            <input
+              type="text"
+              aria-label="right"
+              placeholder="Noida,india"
+              class="right-inputs"
+            />
+            <span class="pen"><i class="bi bi-pencil-fill"></i></span>
+            <hr class="right-hr" />
+          </div>
+         </div>
+        
+      </div>
+  
+    </div>
+ 
+  </body>
+</html>
